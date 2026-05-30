@@ -1,0 +1,8 @@
+secrets.local.h
+build/
+*.bin
+*.elf
+*.map
+*.hex
+*.log
+.DS_Store
