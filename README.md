@@ -43,7 +43,7 @@ This project was developed with OpenAI Codex. The source code is available for p
   - 視点固定 / カメラ追従の2モード
   - 車両ズーム、カメラリセット
   - Position X/Zを使った走行軌跡レーダー
-  - 進行方向ベクトル、後退時の向き補正
+  - 車体方向、進行方向、横滑り角を分離したドリフト表現
 - タイヤ別のTEMP / SLIP / WET表示
 - Gレーダー、ピークホールド、短時間ピーク表示
 - スロットル、ブレーキ、クラッチ、サイドブレーキ、ステアリング表示
