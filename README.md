@@ -1,10 +1,24 @@
 # Forza Horizon 6 Telemetry Live Dashboard
 
-Version 1.0
+Version 2.0
 
-ESP32-S3をLAN内のWebサーバー兼UDPレシーバーとして動かし、Forza Horizon 6のData Outテレメトリをブラウザでリアルタイム表示するダッシュボードです。ゲーム画面に出にくい車両状態、タイヤ、G、入力、パワー系の情報を、運転中でも読みやすいコックピットUIとして表示します。
+ESP32-S3をLAN内のWebサーバー兼UDPレシーバーとして動かし、Forza Horizon 6のData Outテレメトリをブラウザでリアルタイム表示するダッシュボードです。ゲーム画面に出にくい車両状態、タイヤ、G、入力、パワー系の情報を、運転中でも読みやすい2DコックピットUIと、車両状態を立体的に見せる3D Hologram UIで表示します。
 
 ESP32を使う理由は、テレメトリ表示を特定のPCやアプリに閉じ込めず、同じネットワーク上のどのデバイスからでもブラウザで見られるようにするためです。PC、Mac、iPad、タブレット、スマートフォンなど、Webブラウザが使える端末をそのままセカンドスクリーンとして利用できます。
+
+## English Summary
+
+Real-time Forza Horizon 6 telemetry dashboard for ESP32-S3. The ESP32 receives FH6 Data Out packets over UDP, serves the browser UI over the local network, and streams live telemetry through WebSocket so any device on the same LAN can be used as a second screen.
+
+Highlights:
+
+- ESP32-S3 UDP Data Out receiver and local web server
+- Browser-based dashboard, no dedicated display hardware required
+- 2D cockpit dashboard and 3D Hologram UI
+- Live speed, RPM, tire, input, G-force, power, torque, and vehicle data
+- Wireless telemetry viewing from PC, Mac, iPad, tablet, or smartphone
+
+![Telemetry Hologram UI](assets/hologram-ui.png)
 
 ![Telemetry Live Dashboard main screen](assets/main-dashboard.png)
 
@@ -17,11 +31,19 @@ This project was developed with OpenAI Codex. The source code is available for p
 - ESP32-S3単体でHTTPサーバー、WebSocketサーバー、FH6 UDP受信を実行
 - ブラウザだけで閲覧できるリアルタイムダッシュボード
 - 60Hzクラスのライブ更新
+- 2D Dashboard UIと3D Hologram UIを切り替え可能
 - メートル法、日本向け単位表示
   - km/h
   - PS
   - Nm
   - ℃
+- Hologram UI
+  - 3D車両モデル
+  - ロール、ピッチ、サスペンション、衝突減速パルスのアニメーション
+  - 視点固定 / カメラ追従の2モード
+  - 車両ズーム、カメラリセット
+  - Position X/Zを使った走行軌跡レーダー
+  - 進行方向ベクトル、後退時の向き補正
 - タイヤ別のTEMP / SLIP / WET表示
 - Gレーダー、ピークホールド、短時間ピーク表示
 - スロットル、ブレーキ、クラッチ、サイドブレーキ、ステアリング表示
@@ -53,6 +75,7 @@ ForzaHorizon6TelemetryESP32/
 ├── LICENSE
 ├── car_data.h
 ├── assets/
+│   ├── hologram-ui.png
 │   └── main-dashboard.png
 ├── secrets.local.h.example
 ├── tools/
@@ -82,6 +105,7 @@ Data Out IP Port: 7777
 
 ```text
 http://ESP32のIP/
+http://ESP32のIP/holo
 ```
 
 ## arduino-cli Example
@@ -133,9 +157,15 @@ RPM、Gear、Car ID、PIなどの整数値は小数なしで表示します。
 
 右上の設定ボタンから以下を変更できます。
 
-- Display mode
+- View
+  - Dashboard
+  - Hologram
+- Dashboard mode
   - Drive
   - Race
+- Hologram camera
+  - Fixed
+  - Follow
 - Palette
   - Green
   - Cyan
@@ -148,6 +178,8 @@ RPM、Gear、Car ID、PIなどの整数値は小数なしで表示します。
 
 設定はブラウザのlocalStorageに保存されます。
 
+Hologram UIでは、マウスまたはタッチ操作でカメラ角を調整できます。ホイール操作でズームし、右下のリセットボタンで標準の後方視点へ戻せます。
+
 ## API
 
 ### Dashboard
@@ -156,7 +188,15 @@ RPM、Gear、Car ID、PIなどの整数値は小数なしで表示します。
 GET /
 ```
 
-ブラウザUIを返します。
+2D Dashboard UIを返します。
+
+### Hologram
+
+```text
+GET /holo
+```
+
+3D Hologram UIを返します。
 
 ### Telemetry
 

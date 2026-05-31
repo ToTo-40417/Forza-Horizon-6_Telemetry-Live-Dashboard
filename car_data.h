@@ -5,6 +5,10 @@
 // https://forza.net/fh5cars/
 // FH6 appears to expose the same style of CarOrdinal value in Data Out, but a
 // complete official FH6 ordinal-to-name table is not currently published.
+// Supplemental FH6-only ordinals are cross-checked against:
+// https://github.com/shikkie/fh6cardata
+// Additional live-test gaps are cross-checked against:
+// https://forzagarage.com/cars/
 // Unknown FH6 IDs intentionally fall back to "#<ordinal>" in the dashboard.
 
 struct CarDataEntry {
@@ -829,6 +833,7 @@ static const CarDataEntry CAR_DATA[] = {
   {3720, "2022 Cadillac CT5-V Blackwing", "Modern Muscle"},
   {3722, "2022 GMC HUMMER EV Pickup", "Pickups & 4x4s"},
   {3724, "2022 Ferrari 296 GTB", "Modern Supercars"},
+  {3726, "2023 Acura Integra A-Spec", "FH6 Car Data"},
   {3727, "2022 Extreme E #58 McLaren Racing", "Unlimited Offroad"},
   {3728, "2021 Bentley Continental GT Convertible", "GT Cars"},
   {3729, "1976 Volkswagen SP-2", "Classic Sports Cars"},
@@ -915,6 +920,13 @@ static const CarDataEntry CAR_DATA[] = {
   {3953, "2023 Porsche 911 Turbo S", "Modern Supercars"},
   {3959, "2022 Dodge Challenger SRT Super Stock", "Modern Muscle"},
   {3972, "1969 Chevrolet Camaro Jordan Luka 3 Forza Edition", "Track Toys"},
+  {4158, "2010 Lexus LFA FE", "FH6 Car Data"},
+  {4163, "2020 Wuling Sunshine S Forza Edition", "Track Toys"},
+  {4164, "2022 Subaru BRZ FE", "FH6 Car Data"},
+  {4166, "2023 BMW M2 FE", "FH6 Car Data"},
+  {4200, "2020 Lotus Evija FE", "FH6 Car Data"},
+  {4265, "2020 Mercedes-AMG GT Black Series", "FH6 Car Data"},
+  {4268, "2023 Ford F-150 Raptor R", "FH6 Car Data"},
   {9007, "1994 Ford Supervan 3 'Donut Media Edition'", "Track Toys"},
 };
 
