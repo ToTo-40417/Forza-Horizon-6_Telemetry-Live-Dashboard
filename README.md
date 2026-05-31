@@ -13,8 +13,6 @@ Real-time telemetry dashboard for Forza Horizon 6 using ESP32-S3.
 Features:
 
 - UDP Data Out receiver
-- LVGL UI
-- TFT display
 - RPM gauge
 - Shift lights
 - Tire telemetry
