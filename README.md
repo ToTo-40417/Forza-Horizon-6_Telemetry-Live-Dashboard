@@ -1,5 +1,11 @@
 # Forza Horizon 6 Telemetry Live Dashboard
 
+Version 1.0
+
+ESP32-S3をLAN内のWebサーバー兼UDPレシーバーとして動かし、Forza Horizon 6のData Outテレメトリをブラウザでリアルタイム表示するダッシュボードです。ゲーム画面に出にくい車両状態、タイヤ、G、入力、パワー系の情報を、運転中でも読みやすいコックピットUIとして表示します。
+
+ESP32を使う理由は、テレメトリ表示を特定のPCやアプリに閉じ込めず、同じネットワーク上のどのデバイスからでもブラウザで見られるようにするためです。PC、Mac、iPad、タブレット、スマートフォンなど、Webブラウザが使える端末をそのままセカンドスクリーンとして利用できます。
+
 # Forza Horizon 6 Telemetry Dashboard for ESP32-S3
 
 Real-time telemetry dashboard for Forza Horizon 6 using ESP32-S3.
@@ -13,12 +19,6 @@ Features:
 - Shift lights
 - Tire telemetry
 - Wireless telemetry
-
-Version 1.0
-
-ESP32-S3をLAN内のWebサーバー兼UDPレシーバーとして動かし、Forza Horizon 6のData Outテレメトリをブラウザでリアルタイム表示するダッシュボードです。ゲーム画面に出にくい車両状態、タイヤ、G、入力、パワー系の情報を、運転中でも読みやすいコックピットUIとして表示します。
-
-ESP32を使う理由は、テレメトリ表示を特定のPCやアプリに閉じ込めず、同じネットワーク上のどのデバイスからでもブラウザで見られるようにするためです。PC、Mac、iPad、タブレット、スマートフォンなど、Webブラウザが使える端末をそのままセカンドスクリーンとして利用できます。
 
 ![Telemetry Live Dashboard main screen](assets/main-dashboard.png)
 
