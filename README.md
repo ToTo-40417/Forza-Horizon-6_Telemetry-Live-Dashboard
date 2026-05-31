@@ -1,5 +1,19 @@
 # Forza Horizon 6 Telemetry Live Dashboard
 
+# Forza Horizon 6 Telemetry Dashboard for ESP32-S3
+
+Real-time telemetry dashboard for Forza Horizon 6 using ESP32-S3.
+
+Features:
+
+- UDP Data Out receiver
+- LVGL UI
+- TFT display
+- RPM gauge
+- Shift lights
+- Tire telemetry
+- Wireless telemetry
+
 Version 1.0
 
 ESP32-S3をLAN内のWebサーバー兼UDPレシーバーとして動かし、Forza Horizon 6のData Outテレメトリをブラウザでリアルタイム表示するダッシュボードです。ゲーム画面に出にくい車両状態、タイヤ、G、入力、パワー系の情報を、運転中でも読みやすいコックピットUIとして表示します。
