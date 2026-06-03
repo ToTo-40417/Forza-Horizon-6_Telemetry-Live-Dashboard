@@ -271,6 +271,11 @@ GitHubで公開する前に以下を確認してください。
 - README内のポート、FQBN、対応ボード情報が最新であること
 - LICENSEが現在の利用条件と一致していること
 
+## Note
+
+- https://note.com/joyful_beetle869/n/nd11d8d126599
+- https://note.com/joyful_beetle869/n/ne6033422d409
+
 ## License
 
 Personal, educational, hobby, and other non-commercial use is permitted. For commercial, monetized, sponsored, paid, advertising-supported, client-facing, or revenue-generating use, please contact the copyright holder in advance. See [LICENSE](LICENSE).
