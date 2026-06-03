@@ -10,6 +10,51 @@
 // Additional live-test gaps are cross-checked against:
 // https://forzagarage.com/cars/
 // Unknown FH6 IDs intentionally fall back to "#<ordinal>" in the dashboard.
+//
+// NEW: FH6 pending ordinal verification
+// The following FH6-listed vehicles are intentionally not inserted into
+// CAR_DATA until their CarOrdinal values are confirmed:
+// 2021 Alfa Romeo Giulia GTAm
+// 1990 Alfa Romeo SE 048SP
+// 2016 Aston Martin Vulcan
+// 2020 Audi R8 V10 performance
+// 2023 Audi R8 Coupe V10 GT RWD
+// 2020 BMW M2 Competition Coupe
+// 2024 BMW X6 M Competition
+// 1969 Datsun 2000 Roadster
+// 2006 Dodge Ram SRT-10
+// 2025 Ferrari F80
+// 2025 GR GT Prototype
+// 1984 Honda City E II
+// 1986 Honda Civic Si
+// 1991 Honda Beat
+// 1994 Honda Acty
+// 2008 Honda Civic Type R FD2
+// 2022 Honda e
+// 2023 Honda Civic Type R
+// 2021 Hyundai i20 N
+// 1990 Mitsubishi #269 Attacking the Clock Racing Minicab Time Attack
+// 1995 Mitsubishi Montero Exceed 2800 TD
+// 1983 Nissan #11 Tomica Skyline Turbo Super Silhouette
+// 1990 Nissan #12 Skyline GT-R (BNR32 Gr.A) JTC
+// 1993 Nissan #32 Skyline WTAC 'Xtreme GTR'
+// 1995 Nissan Gloria Gran Turismo
+// 1998 Nissan Skyline GT-R 40th Anniversary
+// 2000 Nissan #36 Dream Project S15 Silvia WTAC
+// 2024 Nissan GT-R Nismo
+// 2024 Ram 1500 TRX
+// 1974 Toyota Corolla SR5
+// 1985 Toyota Sprinter Trueno GT Apex Forza Edition
+// 1995 Toyota J&J Motorsport Supra WTAC
+// 1996 Toyota Starlet Glanza V
+// 1997 Toyota Chaser 2.5 Tourer V
+// 1999 Toyota Altezza RS200 Z EDITION
+// 2005 Toyota Crown Super Deluxe Taxi
+// 2013 Toyota 86 Stories
+// 2017 Toyota JPN Taxi
+// 2023 Toyota GR Corolla
+// 2025 Toyota Land Cruiser
+// 1989 Volkswagen Rallye Golf
 
 struct CarDataEntry {
   int32_t ordinal;
@@ -171,7 +216,6 @@ static const CarDataEntry CAR_DATA[] = {
   {1234, "2010 Porsche 911 Sport Classic", "Modern Supercars"},
   {1248, "2010 Rossion Q1", "Modern Supercars"},
   {1253, "2010 Mosler MT900S", "Extreme Track Toys"},
-  {1253, "2010 Noble M600", "Modern Supercars"},
   {1260, "2010 Lexus LFA", "Modern Supercars"},
   {1264, "2010 Renault Clio R.S.", "Hot Hatch"},
   {1267, "1971 AMC Javelin AMX", "Classic Muscle"},
@@ -208,7 +252,6 @@ static const CarDataEntry CAR_DATA[] = {
   {1322, "2011 Lamborghini Sesto Elemento", "Extreme Track Toys"},
   {1323, "2011 SUBARU WRX STI", "Modern Rally"},
   {1328, "2011 Bugatti Veyron Super Sport", "Hypercars"},
-  {1328, "2011 Ford F-150 SVT Raptor", "Pickups & 4x4s"},
   {1329, "1987 Buick Regal GNX", "Retro Muscle"},
   {1330, "1970 Chevrolet Camaro Z28", "Classic Muscle"},
   {1332, "1968 Dodge Dart HEMI Super Stock", "Classic Muscle"},
@@ -249,7 +292,6 @@ static const CarDataEntry CAR_DATA[] = {
   {1429, "1969 Chevrolet Nova Super Sport 396", "Classic Muscle"},
   {1435, "1963 Volkswagen Beetle", "Cult Cars"},
   {1451, "2012 Ascari KZ1R", "Modern Supercars"},
-  {1451, "2012 BMW M5", "Super Saloons"},
   {1459, "1957 Chevrolet Bel Air", "Rods and Customs"},
   {1460, "2011 Ford Transit SuperSportVan", "Vans & Utility"},
   {1477, "2011 Hot Wheels Bone Shaker", "Rods and Customs"},
@@ -270,7 +312,6 @@ static const CarDataEntry CAR_DATA[] = {
   {1533, "1977 Holden Torana A9X", "Classic Muscle"},
   {1536, "1973 Alpine A110 1600s", "Classic Rally"},
   {1539, "2012 Porsche 911 GT2 RS", "Track Toys"},
-  {1539, "2012 Porsche 911 GT3 RS 4.0", "Track Toys"},
   {1549, "1968 Alfa Romeo 33 Stradale", "Classic Racers"},
   {1559, "1955 Mercedes-Benz 300 SLR", "Classic Racers"},
   {1562, "2013 Dodge SRT Viper GTS", "Modern Muscle"},
@@ -800,7 +841,7 @@ static const CarDataEntry CAR_DATA[] = {
   {3673, "2020 Lamborghini SC20", "Hypercars"},
   {3676, "2021 Hyundai #98 Bryan Herta Autosport Elantra N", "Track Toys"},
   {3677, "2021 Lynk & Co 03+", "Super Saloons"},
-  {3678, "2020 Hyundai I30 N", "Super Hot Hatch"},
+  {3678, "2020 Hyundai i30 N", "Super Hot Hatch"},
   {3681, "1998 Toyota Supra RZ 'Welcome Pack'", "Retro Sports Cars"},
   {3682, "2018 Apollo Intensa Emozione", "Extreme Track Toys"},
   {3683, "2008 Mitsubishi Lancer Evolution X GSR 'Welcome Pack'", "Modern Rally"},
@@ -860,6 +901,8 @@ static const CarDataEntry CAR_DATA[] = {
   {3763, "2023 BMW M2", "Super Saloons"},
   {3764, "2022 BMW M5 CS", "Super Saloons"},
   {3766, "2023 Chevrolet Corvette Z06", "Track Toys"},
+  // NEW: FH6 confirmed
+  {3767, "2022 Acura NSX Type S", "Modern Supercars"},
   {3771, "2024 Chevrolet Corvette E-Ray", "Modern Supercars"},
   {3774, "2021 Lamborghini Countach LPI 800-4", "Hypercars"},
   {3775, "2021 Lamborghini Aventador LP 780-4 Ultimae", "Hypercars"},
@@ -937,12 +980,12 @@ const CarDataEntry* findCarData(int32_t ordinal) {
   size_t high = CAR_DATA_COUNT;
   while (low < high) {
     const size_t mid = low + (high - low) / 2;
-    if (CAR_DATA[mid].ordinal == ordinal) return &CAR_DATA[mid];
     if (CAR_DATA[mid].ordinal < ordinal) {
       low = mid + 1;
     } else {
       high = mid;
     }
   }
-  return nullptr;
+  if (low >= CAR_DATA_COUNT || CAR_DATA[low].ordinal != ordinal) return nullptr;
+  return &CAR_DATA[low];
 }
