@@ -1,6 +1,6 @@
 # Forza Horizon 6 Telemetry Live Dashboard
 
-Version 2.1
+Version 2.2
 
 ESP32-S3をLAN内のWebサーバー兼UDPレシーバーとして動かし、Forza Horizon 6のData Outテレメトリをブラウザでリアルタイム表示するダッシュボードです。ゲーム画面に出にくい車両状態、タイヤ、G、入力、パワー系の情報を、運転中でも読みやすい2DコックピットUIと、車両状態を立体的に見せる3D Hologram UIで表示します。
 
@@ -59,20 +59,6 @@ This project was developed with OpenAI Codex. The source code is available for p
 - 車両ID、クラス、PI、駆動方式、エンジン情報表示
 - 車両データ対応表 `car_data.h`
 - `/api/telemetry` と `/api/status` によるJSON取得
-
-## Version 2.1 Notes
-
-V2.1は、V2.0の3D Hologram UIを安定化し、品質プリセットとテレメトリ表示の精度を高めたバージョンです。
-
-- High品質の車両ホログラムをGT-R風スポーツクーペモデルへ更新
-- タイヤ表示を温度中心からTEMP / SLIP / RATIO / ANGLE / WET中心へ拡張
-- Low / Medium / High 品質プリセットを追加
-- 縦型画面で3D表示がメーター類の下に隠れないようレイアウトを調整
-- Hologram UIの不要な補助テキストを削除
-- 起動直後のWi-Fi接続遅延を修正
-- Wi-Fi切断後の再接続時にUDP/WebSocketサービスを再初期化しやすく修正
-- 車名・車種文字列をJSONエスケープし、引用符を含む車名でもJSONが壊れないよう修正
-- 重複CarOrdinalは二分探索結果が揺れないよう先頭候補へ固定
 
 ## Hardware
 
