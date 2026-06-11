@@ -17,25 +17,16 @@
 // 2021 Alfa Romeo Giulia GTAm
 // 1990 Alfa Romeo SE 048SP
 // 2016 Aston Martin Vulcan
-// 2020 Audi R8 V10 performance
 // 2023 Audi R8 Coupe V10 GT RWD
-// 2020 BMW M2 Competition Coupe
 // 2024 BMW X6 M Competition
-// 1969 Datsun 2000 Roadster
 // 2006 Dodge Ram SRT-10
 // 2025 Ferrari F80
 // 2025 GR GT Prototype
-// 1984 Honda City E II
-// 1986 Honda Civic Si
 // 1991 Honda Beat
-// 1994 Honda Acty
 // 2008 Honda Civic Type R FD2
 // 2022 Honda e
-// 2023 Honda Civic Type R
-// 2021 Hyundai i20 N
 // 1990 Mitsubishi #269 Attacking the Clock Racing Minicab Time Attack
 // 1995 Mitsubishi Montero Exceed 2800 TD
-// 1983 Nissan #11 Tomica Skyline Turbo Super Silhouette
 // 1990 Nissan #12 Skyline GT-R (BNR32 Gr.A) JTC
 // 1993 Nissan #32 Skyline WTAC 'Xtreme GTR'
 // 1995 Nissan Gloria Gran Turismo
@@ -49,8 +40,6 @@
 // 1996 Toyota Starlet Glanza V
 // 1997 Toyota Chaser 2.5 Tourer V
 // 1999 Toyota Altezza RS200 Z EDITION
-// 2005 Toyota Crown Super Deluxe Taxi
-// 2013 Toyota 86 Stories
 // 2017 Toyota JPN Taxi
 // 2023 Toyota GR Corolla
 // 2025 Toyota Land Cruiser
@@ -335,6 +324,8 @@ static const CarDataEntry CAR_DATA[] = {
   {1615, "1969 FIAT Dino 2.4 Coupe", "Classic Sports Cars"},
   {1619, "1967 Mercedes-Benz 280 SL", "Rare Classics"},
   {1627, "2013 Mercedes-Benz G 65 AMG", "Pickups & 4x4s"},
+  // NEW: FH6 confirmed
+  {1650, "1986 Honda Civic Si", "Retro Hot Hatch"},
   {1651, "2013 Aston Martin V12 Vantage S", "Super GT"},
   {1652, "2013 Caterham Superlight R500", "Track Toys"},
   {1653, "2013 KTM X-Bow R", "Track Toys"},
@@ -420,6 +411,8 @@ static const CarDataEntry CAR_DATA[] = {
   {2263, "2015 Dodge Challenger SRT Hellcat", "Modern Muscle"},
   {2267, "2016 Mazda MX-5", "Modern Sports Cars"},
   {2270, "1973 Nissan Skyline H/T 2000GT-R", "Classic Sports Cars"},
+  // NEW: FH6 confirmed
+  {2272, "1969 Datsun 2000 Roadster", "Classic Sports Cars"},
   {2289, "2014 Porsche 911 Turbo S", "Modern Supercars"},
   {2290, "2014 Porsche 918 Spyder", "Hypercars"},
   {2293, "2015 Porsche Cayman GTS", "Modern Sports Cars"},
@@ -538,6 +531,8 @@ static const CarDataEntry CAR_DATA[] = {
   {2775, "2017 Porsche #92 Porsche GT Team 911 RSR", "Extreme Track Toys"},
   {2792, "1966 Ford #2 GT40 MkII", "Classic Racers"},
   {2793, "1967 Ferrari #24 Ferrari Spa 330 P4", "Classic Racers"},
+  // NEW: FH6 confirmed
+  {2801, "1983 Nissan #11 Tomica Skyline Turbo Super Silhouette", "Retro Sports Cars"},
   {2822, "1985 Nissan Safari Turbo", "Pickups & 4x4s"},
   {2825, "1997 Lotus Elise GT1", "Retro Supercars"},
   {2838, "2017 Ram 2500 Power Wagon", "Pickups & 4x4s"},
@@ -748,6 +743,8 @@ static const CarDataEntry CAR_DATA[] = {
   {3415, "1966 Jaguar XJ13", "Classic Racers"},
   {3419, "2020 Toyota Tundra TRD Pro", "Pickups & 4x4s"},
   {3428, "2019 Ginetta G10 RM", "Track Toys"},
+  // NEW: FH6 confirmed
+  {3434, "2020 BMW M2 Competition Coupe", "Super Saloons"},
   {3437, "2020 McLaren GT", "Super GT"},
   {3438, "1961 DeBerti Ford Econoline 'Shop Rod'", "Rods and Customs"},
   {3439, "2019 DeBerti Ford Super Duty F-250 Lariat 'Transformer'", "Unlimited Offroad"},
@@ -889,6 +886,8 @@ static const CarDataEntry CAR_DATA[] = {
   {3742, "2003 Nissan Donut Media 350Z 'Hi Car'", "Track Toys"},
   {3743, "2004 Nissan Donut Media 350Z 'Low Car'", "Track Toys"},
   {3744, "2023 Formula Drift #64 Forsberg Racing Nissan Z", "Drift Cars"},
+  // NEW: FH6 confirmed
+  {3745, "2020 Audi R8 V10 performance", "Modern Supercars"},
   {3746, "2022 CUPRA Formentor VZ5", "Sports Utility Heroes"},
   {3747, "2022 CUPRA Tavascan Concept", "Sports Utility Heroes"},
   {3748, "2022 CUPRA UrbanRebel Concept", "Track Toys"},
@@ -904,6 +903,8 @@ static const CarDataEntry CAR_DATA[] = {
   // NEW: FH6 confirmed
   {3767, "2022 Acura NSX Type S", "Modern Supercars"},
   {3771, "2024 Chevrolet Corvette E-Ray", "Modern Supercars"},
+  // NEW: FH6 confirmed
+  {3773, "2023 Honda Civic Type R", "Super Hot Hatch"},
   {3774, "2021 Lamborghini Countach LPI 800-4", "Hypercars"},
   {3775, "2021 Lamborghini Aventador LP 780-4 Ultimae", "Hypercars"},
   {3781, "2023 Porsche 911 GT3 RS", "Track Toys"},
@@ -943,8 +944,12 @@ static const CarDataEntry CAR_DATA[] = {
   {3855, "1991 Nissan Figaro", "Cult Cars"},
   {3856, "1987 Nissan Be-1", "Cult Cars"},
   {3858, "1997 Nissan Stagea Four V", "Retro Saloons"},
+  // NEW: FH6 confirmed
+  {3859, "1984 Honda City E II", "Retro Hot Hatch"},
   {3860, "1989 Nissan S-Cargo", "Cult Cars"},
   {3864, "2023 KIA EV6 GT", "Sports Utility Heroes"},
+  // NEW: FH6 confirmed
+  {3865, "1994 Honda Acty", "Vans & Utility"},
   {3881, "1981 Universal Studios Back to the Future Time Machine 1", "Cult Cars"},
   {3882, "1981 Universal Studios Back to the Future Time Machine 2", "Cult Cars"},
   {3883, "1981 Universal Studios Back to the Future Time Machine 3", "Cult Cars"},
@@ -958,6 +963,8 @@ static const CarDataEntry CAR_DATA[] = {
   {3910, "2023 Porsche 911 Rallye", "Rally Monsters"},
   {3914, "1991 Toyota Chaser GT Twin Turbo", "Retro Saloons"},
   {3921, "2024 Nissan Z NISMO", "Modern Sports Cars"},
+  // NEW: FH6 confirmed
+  {3928, "2021 Hyundai i20 N", "Hot Hatch"},
   {3929, "1989 Nissan Pao", "Cult Cars"},
   {3951, "2023 Porsche 911 GT3 R", "Extreme Track Toys"},
   {3953, "2023 Porsche 911 Turbo S", "Modern Supercars"},
@@ -968,6 +975,10 @@ static const CarDataEntry CAR_DATA[] = {
   {4164, "2022 Subaru BRZ FE", "FH6 Car Data"},
   {4166, "2023 BMW M2 FE", "FH6 Car Data"},
   {4200, "2020 Lotus Evija FE", "FH6 Car Data"},
+  // NEW: FH6 confirmed
+  {4255, "2005 Toyota Crown Super Deluxe Taxi", "Cult Cars"},
+  // NEW: FH6 confirmed
+  {4259, "2013 Toyota 86 'Stories'", "Modern Sports Cars"},
   {4265, "2020 Mercedes-AMG GT Black Series", "FH6 Car Data"},
   {4268, "2023 Ford F-150 Raptor R", "FH6 Car Data"},
   {9007, "1994 Ford Supervan 3 'Donut Media Edition'", "Track Toys"},
